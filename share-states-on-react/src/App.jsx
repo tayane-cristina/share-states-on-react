@@ -1,12 +1,16 @@
-
 import './App.css'
+import Header from './components/useContext/header/Header'
+import { ThemeProvider } from './components/useContext/providerContext'
+import { ThemeContext } from './components/useContext/createContextTest'
+import { useContext } from 'react'
 
 function App() {
 
   return (
-    <>
-      <h1>Compartilhando Estados no React com useContext</h1>
-    </>
+    <ThemeProvider>
+      <Header />
+        <h1>Compartilhando Estados no React com useContext</h1> 
+    </ThemeProvider>
   )
 }
 
